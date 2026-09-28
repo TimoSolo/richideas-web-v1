@@ -1,9 +1,0 @@
-[
-  { "text": "Home", "url": "/" },
-  { "text": "About Us", "url": "/about-us/" },
-  { "text": "Services", "url": "/services/" },
-  { "text": "Fees", "url": "/fee-structure/" },
-  { "text": "Free Will", "url": "/free-will/" },
-  { "text": "Insights", "url": "/blogs/" },
-  { "text": "Contact", "url": "/contact-us/" }
-]

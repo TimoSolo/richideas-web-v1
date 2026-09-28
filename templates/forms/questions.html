@@ -1,0 +1,186 @@
+<div class="ri-form-wrap">
+  <h1 class="ri-form-title">Getting to know you</h1>
+  <p class="ri-lead">Before our Foundation session, this short questionnaire helps us understand where you are and what matters most, so our time together is spent on you rather than on admin. Nothing here is binding and there are no wrong answers. Skip anything you&rsquo;d rather talk through in person.</p>
+  <form class="ri-form" data-ri-form="questions" data-subject="Website: new client questionnaire" novalidate>
+    <h3 class="ri-section">About you</h3>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="q-name">Full name <span class="ri-req">*</span></label>
+        <input id="q-name" name="Full name" type="text" required autocomplete="name">
+      </div>
+      <div class="ri-field">
+        <label for="q-email">Email address <span class="ri-req">*</span></label>
+        <input id="q-email" name="Email" type="email" required autocomplete="email">
+      </div>
+    </div>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="q-phone">Mobile number <span class="ri-req">*</span></label>
+        <input id="q-phone" name="Phone" type="tel" required autocomplete="tel">
+      </div>
+      <div class="ri-field">
+        <label for="q-age">Your age</label>
+        <select id="q-age" name="Age">
+          <option value="">Please choose</option>
+          <option>Under 30</option>
+          <option>30 to 39</option>
+          <option>40 to 49</option>
+          <option>50 to 59</option>
+          <option>60 or over</option>
+        </select>
+      </div>
+    </div>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="q-work">What do you do for a living?</label>
+        <input id="q-work" name="Occupation" type="text" placeholder="e.g. employed, own business, contractor, between jobs">
+      </div>
+      <div class="ri-field">
+        <label for="q-city">Where are you based?</label>
+        <input id="q-city" name="Location" type="text" placeholder="City / country">
+      </div>
+    </div>
+
+    <h3 class="ri-section">Your family</h3>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="q-marital">Relationship status</label>
+        <select id="q-marital" name="Marital status">
+          <option value="">Please choose</option>
+          <option>Single</option>
+          <option>Married in community of property</option>
+          <option>Married out of community of property</option>
+          <option>Life partner (not married)</option>
+          <option>Divorced</option>
+          <option>Widowed</option>
+        </select>
+      </div>
+      <div class="ri-field">
+        <label for="q-partner">Will your partner join the planning?</label>
+        <select id="q-partner" name="Partner joining">
+          <option value="">Please choose</option>
+          <option>Yes</option>
+          <option>No</option>
+          <option>Not applicable</option>
+        </select>
+      </div>
+    </div>
+    <div class="ri-field">
+      <label for="q-deps">Who depends on you financially? (children and their ages, parents, others)</label>
+      <input id="q-deps" name="Dependants" type="text" placeholder="e.g. two children, 4 and 7; my mother">
+    </div>
+
+    <h3 class="ri-section">What&rsquo;s on your mind</h3>
+    <div class="ri-field">
+      <label for="q-why">What prompted you to reach out now? <span class="ri-req">*</span></label>
+      <textarea id="q-why" name="What prompted this" rows="4" required></textarea>
+    </div>
+    <fieldset class="ri-field">
+      <legend>Which of these would you like help with?</legend>
+      <div class="ri-checks">
+        <label><input type="checkbox" name="Goals" value="Budget and cashflow"> Budget and cashflow</label>
+        <label><input type="checkbox" name="Goals" value="Getting out of debt"> Getting out of debt</label>
+        <label><input type="checkbox" name="Goals" value="Emergency fund and savings"> Emergency fund and savings</label>
+        <label><input type="checkbox" name="Goals" value="Investing"> Investing</label>
+        <label><input type="checkbox" name="Goals" value="Retirement planning"> Retirement planning</label>
+        <label><input type="checkbox" name="Goals" value="Children's education"> Children&rsquo;s education</label>
+        <label><input type="checkbox" name="Goals" value="Buying property"> Buying property</label>
+        <label><input type="checkbox" name="Goals" value="Life, disability and income cover"> Life, disability and income cover</label>
+        <label><input type="checkbox" name="Goals" value="Medical aid and gap cover"> Medical aid and gap cover</label>
+        <label><input type="checkbox" name="Goals" value="Tax"> Tax</label>
+        <label><input type="checkbox" name="Goals" value="Will, estate and trusts"> Will, estate and trusts</label>
+        <label><input type="checkbox" name="Goals" value="Business or succession"> Business or succession</label>
+        <label><input type="checkbox" name="Goals" value="Second opinion on my current plan"> Second opinion on my current plan</label>
+      </div>
+    </fieldset>
+    <div class="ri-field">
+      <label for="q-worry">If you could fix one thing about your money in the next year, what would it be?</label>
+      <textarea id="q-worry" name="One thing to fix" rows="3"></textarea>
+    </div>
+
+    <h3 class="ri-section">Where you are today</h3>
+    <p class="ri-help">Rough figures are fine. We&rsquo;ll go through the detail together.</p>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="q-income">Household income per month (after tax)</label>
+        <select id="q-income" name="Household income">
+          <option value="">Prefer to discuss</option>
+          <option>Under R30 000</option>
+          <option>R30 000 to R60 000</option>
+          <option>R60 000 to R100 000</option>
+          <option>R100 000 to R150 000</option>
+          <option>More than R150 000</option>
+        </select>
+      </div>
+      <div class="ri-field">
+        <label for="q-saving">Roughly how much do you save or invest each month?</label>
+        <select id="q-saving" name="Monthly saving">
+          <option value="">Prefer to discuss</option>
+          <option>Nothing at the moment</option>
+          <option>Under R2 500</option>
+          <option>R2 500 to R7 500</option>
+          <option>R7 500 to R15 000</option>
+          <option>More than R15 000</option>
+        </select>
+      </div>
+    </div>
+    <fieldset class="ri-field">
+      <legend>What do you currently have in place?</legend>
+      <div class="ri-checks">
+        <label><input type="checkbox" name="In place" value="Pension / provident fund"> Pension or provident fund at work</label>
+        <label><input type="checkbox" name="In place" value="Retirement annuity"> Retirement annuity</label>
+        <label><input type="checkbox" name="In place" value="Tax-free savings"> Tax-free savings account</label>
+        <label><input type="checkbox" name="In place" value="Unit trusts / ETFs / shares"> Unit trusts, ETFs or shares</label>
+        <label><input type="checkbox" name="In place" value="Property"> Property (home or investment)</label>
+        <label><input type="checkbox" name="In place" value="Life cover"> Life cover</label>
+        <label><input type="checkbox" name="In place" value="Disability / income protection"> Disability or income protection</label>
+        <label><input type="checkbox" name="In place" value="Medical aid"> Medical aid</label>
+        <label><input type="checkbox" name="In place" value="A Will"> A Will</label>
+        <label><input type="checkbox" name="In place" value="A budget I actually use"> A budget I actually use</label>
+      </div>
+    </fieldset>
+    <div class="ri-field">
+      <label for="q-debt">Any debt we should know about? (bond, vehicle, credit cards, personal loans, student loans)</label>
+      <input id="q-debt" name="Debt" type="text">
+    </div>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="q-adviser">Do you currently have a financial adviser or broker?</label>
+        <select id="q-adviser" name="Existing adviser">
+          <option value="">Please choose</option>
+          <option>No</option>
+          <option>Yes, and I&rsquo;m happy with them</option>
+          <option>Yes, but I&rsquo;m looking to change</option>
+        </select>
+      </div>
+      <div class="ri-field">
+        <label for="q-source">How did you hear about Rich Ideas?</label>
+        <select id="q-source" name="How did you hear about us">
+          <option value="">Please choose</option>
+          <option>Referred by a friend, family member or client</option>
+          <option>LinkedIn</option>
+          <option>Newsletter (Wealth Without Worry)</option>
+          <option>Radio or podcast</option>
+          <option>Google search</option>
+          <option>Facebook or X (Twitter)</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="ri-field">
+      <label for="q-more">Anything else you&rsquo;d like us to know before we meet?</label>
+      <textarea id="q-more" name="Anything else" rows="3"></textarea>
+    </div>
+    <div class="ri-field ri-check">
+      <input id="q-consent" name="Consent" type="checkbox" value="Agreed" required>
+      <label for="q-consent">I understand that Rich Ideas will use this information to prepare for our planning conversation and will keep it confidential, as described in our <a href="{{root}}contact-us/#privacy">privacy note</a>. <span class="ri-req">*</span></label>
+    </div>
+    <input type="text" name="_gotcha" class="ri-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="ri-actions">
+      <button type="submit" class="btn btn-primary ri-submit">Send my answers</button>
+    </div>
+    <div class="ri-msg ri-msg--ok" hidden><strong>Thank you.</strong> We&rsquo;ve received your answers and will use them to prepare for our session.</div>
+    <div class="ri-msg ri-msg--mail" hidden><strong>Almost there.</strong> Your email app should have opened with your answers filled in. Just press send. If it didn&rsquo;t open, email <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a>.</div>
+    <div class="ri-msg ri-msg--err" hidden><strong>Sorry, that didn&rsquo;t go through.</strong> Please email <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a> and we&rsquo;ll send you the questions by email instead.</div>
+  </form>
+</div>

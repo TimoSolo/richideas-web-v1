@@ -1,0 +1,72 @@
+<div class="ri-form-wrap">
+  <h1 class="ri-form-title">Tell us how we&rsquo;re doing</h1>
+  <p class="ri-lead">Your honest feedback helps us serve you and every family we work with better. It takes two minutes. If you&rsquo;re happy for us to share your words with people considering Rich Ideas, tick the box at the end and we&rsquo;ll only ever use your first name.</p>
+  <form class="ri-form" data-ri-form="review" data-subject="Website: client review" novalidate>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="rv-name">Your name <span class="ri-req">*</span></label>
+        <input id="rv-name" name="Name" type="text" required autocomplete="name">
+      </div>
+      <div class="ri-field">
+        <label for="rv-email">Email address <span class="ri-req">*</span></label>
+        <input id="rv-email" name="Email" type="email" required autocomplete="email">
+      </div>
+    </div>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="rv-since">How long have you been with Rich Ideas?</label>
+        <select id="rv-since" name="Client for">
+          <option>Less than a year</option>
+          <option>1 to 3 years</option>
+          <option>3 to 5 years</option>
+          <option>More than 5 years</option>
+        </select>
+      </div>
+      <div class="ri-field">
+        <label for="rv-with">Who do you mainly work with?</label>
+        <select id="rv-with" name="Works with">
+          <option>Terence</option>
+          <option>Salom&eacute;</option>
+          <option>Both</option>
+        </select>
+      </div>
+    </div>
+    <fieldset class="ri-field ri-rating">
+      <legend>Overall, how would you rate your experience? <span class="ri-req">*</span></legend>
+      <div class="ri-rating__opts">
+        <label><input type="radio" name="Rating" value="5" required> 5 &ndash; Excellent</label>
+        <label><input type="radio" name="Rating" value="4"> 4 &ndash; Good</label>
+        <label><input type="radio" name="Rating" value="3"> 3 &ndash; Okay</label>
+        <label><input type="radio" name="Rating" value="2"> 2 &ndash; Poor</label>
+        <label><input type="radio" name="Rating" value="1"> 1 &ndash; Very poor</label>
+      </div>
+    </fieldset>
+    <div class="ri-field">
+      <label for="rv-text">What has it been like working with us? <span class="ri-req">*</span></label>
+      <textarea id="rv-text" name="Review" rows="6" required placeholder="What were you worried about before? What changed? What could we do better?"></textarea>
+    </div>
+    <div class="ri-field">
+      <label for="rv-improve">Is there anything we should do differently?</label>
+      <textarea id="rv-improve" name="Suggestions" rows="3"></textarea>
+    </div>
+    <div class="ri-field">
+      <label for="rv-publish">May we share your feedback on our website?</label>
+      <select id="rv-publish" name="Permission to publish">
+        <option>Yes, with my first name</option>
+        <option>Yes, anonymously</option>
+        <option>No, keep it private</option>
+      </select>
+    </div>
+    <div class="ri-field ri-check">
+      <input id="rv-consent" name="Consent" type="checkbox" value="Agreed" required>
+      <label for="rv-consent">I agree that Rich Ideas may store this feedback and contact me about it if needed. <span class="ri-req">*</span></label>
+    </div>
+    <input type="text" name="_gotcha" class="ri-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="ri-actions">
+      <button type="submit" class="btn btn-primary ri-submit">Send my feedback</button>
+    </div>
+    <div class="ri-msg ri-msg--ok" hidden><strong>Thank you.</strong> We read every review, and we&rsquo;re grateful for the time you took.</div>
+    <div class="ri-msg ri-msg--mail" hidden><strong>Almost there.</strong> Your email app should have opened with your feedback filled in. Just press send. If it didn&rsquo;t open, email <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a>.</div>
+    <div class="ri-msg ri-msg--err" hidden><strong>Sorry, that didn&rsquo;t go through.</strong> Please email your feedback to <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a>.</div>
+  </form>
+</div>

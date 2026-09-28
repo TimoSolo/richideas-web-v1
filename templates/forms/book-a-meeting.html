@@ -1,0 +1,65 @@
+<div class="ri-form-wrap">
+  <h1 class="ri-form-title">Book a free &ldquo;Do We Fit&rdquo; chat</h1>
+  <p class="ri-lead">Every relationship at Rich Ideas starts with a relaxed, no-obligation virtual conversation. No sales pitch. We get to know each other, hear what&rsquo;s on your mind, and you decide whether we&rsquo;re the right fit. Tell us a little about yourself and we&rsquo;ll come back to you within one working day to confirm a time.</p>
+  <p class="ri-scheduler" data-ri-scheduler hidden>Prefer to pick a time yourself? <a href="#" class="btn btn-primary" data-ri-scheduler-link target="_blank" rel="noopener">Choose a slot in our calendar</a></p>
+  <form class="ri-form" data-ri-form="book-a-meeting" data-subject="Website: appointment request" novalidate>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="bm-name">Your name <span class="ri-req">*</span></label>
+        <input id="bm-name" name="Name" type="text" required autocomplete="name">
+      </div>
+      <div class="ri-field">
+        <label for="bm-email">Email address <span class="ri-req">*</span></label>
+        <input id="bm-email" name="Email" type="email" required autocomplete="email">
+      </div>
+    </div>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="bm-phone">Mobile number <span class="ri-req">*</span></label>
+        <input id="bm-phone" name="Phone" type="tel" required autocomplete="tel" placeholder="e.g. 083 123 4567">
+      </div>
+      <div class="ri-field">
+        <label for="bm-contact">How should we contact you?</label>
+        <select id="bm-contact" name="Preferred contact">
+          <option>Phone call</option>
+          <option>WhatsApp</option>
+          <option>Email</option>
+          <option>Video call (Teams / Zoom / Google Meet)</option>
+        </select>
+      </div>
+    </div>
+    <div class="ri-field">
+      <label for="bm-when">When suits you best?</label>
+      <input id="bm-when" name="Preferred times" type="text" placeholder="e.g. weekday mornings, or Tuesday after 16:00">
+    </div>
+    <div class="ri-field">
+      <label for="bm-about">What would you like to talk about?</label>
+      <textarea id="bm-about" name="What to discuss" rows="5" placeholder="A few lines is plenty: where you are, what&rsquo;s prompting this, and anything you&rsquo;d like us to prepare for."></textarea>
+    </div>
+    <div class="ri-field">
+      <label for="bm-source">How did you hear about us?</label>
+      <select id="bm-source" name="How did you hear about us">
+        <option value="">Please choose</option>
+        <option>Referred by a friend, family member or client</option>
+        <option>LinkedIn</option>
+        <option>Newsletter (Wealth Without Worry)</option>
+        <option>Radio or podcast</option>
+        <option>Google search</option>
+        <option>Facebook or X (Twitter)</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="ri-field ri-check">
+      <input id="bm-consent" name="Consent" type="checkbox" value="Agreed" required>
+      <label for="bm-consent">I agree that Rich Ideas may use these details to contact me about this request, as described in our <a href="{{root}}contact-us/#privacy">privacy note</a>. <span class="ri-req">*</span></label>
+    </div>
+    <input type="text" name="_gotcha" class="ri-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="ri-actions">
+      <button type="submit" class="btn btn-primary ri-submit">Request my chat</button>
+      <span class="ri-note">We&rsquo;ll reply within one working day.</span>
+    </div>
+    <div class="ri-msg ri-msg--ok" hidden><strong>Thank you.</strong> Your request is on its way to us. We&rsquo;ll be in touch within one working day to confirm a time.</div>
+    <div class="ri-msg ri-msg--mail" hidden><strong>Almost there.</strong> Your email app should have opened with your details filled in. Just press send. If it didn&rsquo;t open, email us at <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a> or call <a href="tel:+27115681338">011 568 1338</a>.</div>
+    <div class="ri-msg ri-msg--err" hidden><strong>Sorry, that didn&rsquo;t go through.</strong> Please email <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a> or call <a href="tel:+27115681338">011 568 1338</a> and we&rsquo;ll set it up by hand.</div>
+  </form>
+</div>

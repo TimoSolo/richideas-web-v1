@@ -1,0 +1,35 @@
+<div class="ri-form-wrap ri-form-wrap--tight">
+  <h3 class="ri-form-title">Send us a message</h3>
+  <form class="ri-form" data-ri-form="contact" data-subject="Website: contact message" novalidate>
+    <div class="ri-row">
+      <div class="ri-field">
+        <label for="ct-name">Your name <span class="ri-req">*</span></label>
+        <input id="ct-name" name="Name" type="text" required autocomplete="name">
+      </div>
+      <div class="ri-field">
+        <label for="ct-email">Email address <span class="ri-req">*</span></label>
+        <input id="ct-email" name="Email" type="email" required autocomplete="email">
+      </div>
+    </div>
+    <div class="ri-field">
+      <label for="ct-phone">Phone (optional)</label>
+      <input id="ct-phone" name="Phone" type="tel" autocomplete="tel">
+    </div>
+    <div class="ri-field">
+      <label for="ct-msg">How can we help? <span class="ri-req">*</span></label>
+      <textarea id="ct-msg" name="Message" rows="5" required></textarea>
+    </div>
+    <div class="ri-field ri-check">
+      <input id="ct-consent" name="Consent" type="checkbox" value="Agreed" required>
+      <label for="ct-consent">I agree that Rich Ideas may use these details to respond to my message. <span class="ri-req">*</span></label>
+    </div>
+    <input type="text" name="_gotcha" class="ri-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="ri-actions">
+      <button type="submit" class="btn btn-primary ri-submit">Send message</button>
+    </div>
+    <div class="ri-msg ri-msg--ok" hidden><strong>Thank you.</strong> Your message has been sent. We&rsquo;ll reply within one working day.</div>
+    <div class="ri-msg ri-msg--mail" hidden><strong>Almost there.</strong> Your email app should have opened with your message filled in. Just press send. If it didn&rsquo;t open, email <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a>.</div>
+    <div class="ri-msg ri-msg--err" hidden><strong>Sorry, that didn&rsquo;t go through.</strong> Please email <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a> or call <a href="tel:+27115681338">011 568 1338</a>.</div>
+  </form>
+  <p class="ri-privacy" id="privacy"><strong>Privacy.</strong> Rich Ideas Group (Pty) Ltd is a registered financial services provider and processes personal information in line with the Protection of Personal Information Act (POPIA). Details you send through this website are used only to respond to your request, are not shared with third parties for marketing, and can be corrected or deleted on request to <a href="mailto:hello@richideas.co.za">hello@richideas.co.za</a>.</p>
+</div>
