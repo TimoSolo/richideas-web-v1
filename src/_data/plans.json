@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Foundation",
+    "who": "For families starting to bring their finances into order.",
+    "fee": "R18 500",
+    "period": "year one",
+    "includes": [
+      "Do We Fit call and Foundation sessions",
+      "Analysis of your current position",
+      "A written financial roadmap",
+      "Implementation support",
+      "One annual review"
+    ]
+  },
+  {
+    "name": "Strategy",
+    "who": "For families with growing complexity: property, business income, education planning.",
+    "fee": "On request",
+    "period": "year one",
+    "includes": [
+      "Everything in Foundation",
+      "Investment and retirement strategy",
+      "Risk cover and estate structure review",
+      "Tax-aware planning",
+      "Two reviews a year"
+    ],
+    "featured": true
+  },
+  {
+    "name": "Pinnacle",
+    "who": "Our most comprehensive plan, for families who want everything looked after.",
+    "fee": "R37 500",
+    "period": "year one",
+    "includes": [
+      "Everything in Strategy",
+      "Ongoing implementation and admin handled for you",
+      "Estate and legacy planning",
+      "Priority access to your planner",
+      "Quarterly check-ins"
+    ]
+  }
+]

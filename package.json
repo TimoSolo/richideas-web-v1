@@ -1,0 +1,14 @@
+{
+  "name": "richideas-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for Rich Ideas Group (richideas.co.za), built with Eleventy.",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

@@ -1,0 +1,5 @@
+# Old WordPress URLs that should not 404
+/blog/*            /blogs/           301
+/sample-page/      /                 301
+/agency-homepage-2/ /                301
+/wp-content/uploads/2023/10/Benefits-of-Financial-Advice_A6.jpg /assets/img/benefits-of-financial-advice.jpg 301
