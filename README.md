@@ -11,6 +11,7 @@ scripts/       build.py (one-time WordPress mirror → site/), chrome.py (shared
 templates/     fragments build.py injects: forms, About page, fee table, home hero, insights
 reference/     screenshots of the live WordPress site (before/) and this site (after/)
 .github/       GitHub Pages deployment workflow
+worker/        Cloudflare Worker that emails form submissions via Resend (optional)
 ```
 
 ## What changed from the WordPress site
@@ -41,7 +42,7 @@ Edit `site/assets/js/config.js`:
 
 | Setting | Effect when set |
 | --- | --- |
-| `formEndpoint` (+ `formAccessKey`) | Forms POST JSON to this URL (Web3Forms, Formspree, or your own). Until then they open the visitor's email app with the details pre-filled, addressed to `formEmail`. |
+| `formEndpoint` | Forms POST JSON here. The `worker/` folder holds a Cloudflare Worker that emails submissions via Resend (see `worker/README.md`); Web3Forms/Formspree also work (`formAccessKey` for Web3Forms). Until set, forms open the visitor's email app with the details pre-filled, addressed to `formEmail`. |
 | `bookingUrl` | Shows a "choose a slot" button on Book a Meeting (cal.com, Calendly…). |
 | `ga4` | Loads Google Analytics 4 with that measurement id. Form and newsletter events are tracked. |
 
