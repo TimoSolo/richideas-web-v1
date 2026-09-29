@@ -145,3 +145,10 @@ fieldset.ri-field, fieldset.ri-rating { border: 0; padding: 0; margin: 0 0 18px;
 .ri-btn-outline { background: transparent !important; color: var(--ri-blue) !important; border: 2px solid var(--ri-blue) !important; font-weight: 600; }
 .ri-btn-outline:hover { background: rgba(31,122,224,.08) !important; }
 .ri-team__member img { aspect-ratio: 1 / 1; object-fit: cover; object-position: top; border-radius: 8px; }
+
+/* ---- Hero typography: match the rest of the site instead of Times New Roman ---- */
+.elementor-11 .elementor-element.elementor-element-9500aae .banner-caption h1.banner-title { font-family: "Poppins", "Open Sans", sans-serif; font-weight: 600; font-size: 40px; line-height: 1.2; letter-spacing: -.01em; }
+.elementor-11 .elementor-element.elementor-element-9500aae .banner-caption p { font-family: "Open Sans", "Poppins", sans-serif !important; font-size: 18px; line-height: 1.6; }
+.elementor-11 .elementor-element.elementor-element-9500aae .banner-caption .ri-hero-actions .btn { font-family: "Poppins", "Open Sans", sans-serif !important; font-size: 15px; }
+.elementor-11 .elementor-element.elementor-element-9500aae .banner-caption { max-width: 620px; }
+@media (max-width: 767px) { .elementor-11 .elementor-element.elementor-element-9500aae .banner-caption h1.banner-title { font-size: 30px; } }
