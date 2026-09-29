@@ -2,7 +2,7 @@ name: Deploy site to GitHub Pages
 
 on:
   push:
-    branches: [main, master, 'claude/relaxed-noether-fpleo7']
+    branches: [main]
   workflow_dispatch:
 
 permissions:
