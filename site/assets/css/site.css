@@ -152,3 +152,11 @@ fieldset.ri-field, fieldset.ri-rating { border: 0; padding: 0; margin: 0 0 18px;
 .elementor-11 .elementor-element.elementor-element-9500aae .banner-caption .ri-hero-actions .btn { font-family: "Poppins", "Open Sans", sans-serif !important; font-size: 15px; }
 .elementor-11 .elementor-element.elementor-element-9500aae .banner-caption { max-width: 620px; }
 @media (max-width: 767px) { .elementor-11 .elementor-element.elementor-element-9500aae .banner-caption h1.banner-title { font-size: 30px; } }
+
+/* ---- Sticky menu on inner pages: same dark bar as the home page (white logo + links were invisible on white) ---- */
+body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky { background: rgba(10,10,10,.48) !important; background-image: none !important; }
+body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .navbar-nav>li>a:not(.menu_custom_btn),
+body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .header-search i { color: #fff !important; }
+body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .navbar-nav>li>a:not(.menu_custom_btn):hover,
+body:not(.bizberg_transparent_header) header#masthead .sticky .navbar-nav>li:not(.search_wrapper):not(.header_btn_wrapper):hover { background: rgba(10,10,10,.1) !important; border-color: transparent; }
+body:not(.bizberg_transparent_header) header#masthead .sticky .navbar-nav li ul { border-top-color: rgba(10,10,10,.1) !important; }
