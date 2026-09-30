@@ -154,7 +154,7 @@ fieldset.ri-field, fieldset.ri-rating { border: 0; padding: 0; margin: 0 0 18px;
 @media (max-width: 767px) { .elementor-11 .elementor-element.elementor-element-9500aae .banner-caption h1.banner-title { font-size: 30px; } }
 
 /* ---- Sticky menu on inner pages: same dark bar as the home page (white logo + links were invisible on white) ---- */
-body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky { background: rgba(10,10,10,.48) !important; background-image: none !important; }
+body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky { background: rgba(10,10,10,.48) !important; background-image: none !important; -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px); }
 body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .navbar-nav>li>a:not(.menu_custom_btn),
 body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .header-search i { color: #fff !important; }
 body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .navbar-nav>li>a:not(.menu_custom_btn):hover,
