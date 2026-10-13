@@ -131,3 +131,34 @@
     });
   });
 })();
+
+/* Fees table: couple / single toggle */
+(function () {
+  "use strict";
+  var KEY = "ri-fee-mode";
+  var CAPTIONS = {
+    couple: "* Showing prices for two of us (a couple). All fees include VAT.",
+    single: "* Showing prices for just me (a single person). All fees include VAT."
+  };
+  Array.prototype.forEach.call(document.querySelectorAll(".ri-fees__table"), function (table) {
+    var wrap = table.closest(".ri-fees");
+    var buttons = wrap.querySelectorAll("[data-ri-price]");
+    var caption = wrap.querySelector("[data-ri-caption]");
+    function setMode(mode, save) {
+      table.setAttribute("data-price-mode", mode);
+      Array.prototype.forEach.call(buttons, function (b) {
+        var on = b.getAttribute("data-ri-price") === mode;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      if (caption) { caption.textContent = CAPTIONS[mode]; }
+      if (save) { try { localStorage.setItem(KEY, mode); } catch (e) {} }
+    }
+    Array.prototype.forEach.call(buttons, function (btn) {
+      btn.addEventListener("click", function () { setMode(btn.getAttribute("data-ri-price"), true); });
+    });
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved === "single") { setMode("single", false); }
+  });
+})();

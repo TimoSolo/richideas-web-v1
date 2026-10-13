@@ -83,6 +83,7 @@ fieldset.ri-field, fieldset.ri-rating { border: 0; padding: 0; margin: 0 0 18px;
 .ri-fees__table th, .ri-fees__table td { padding: 12px 14px; border-bottom: 1px solid var(--ri-line); text-align: left; vertical-align: top; }
 .ri-fees__table thead th { background: var(--ri-bg); font-weight: 600; color: var(--ri-ink); }
 .ri-fees__table tbody th { font-weight: 700; color: var(--ri-blue-dark); white-space: nowrap; }
+.ri-fees__price { white-space: nowrap; }
 .ri-fees__table tbody tr:last-child td, .ri-fees__table tbody tr:last-child th { border-bottom: 0; }
 
 /* ---- About page ---- */
@@ -97,7 +98,7 @@ fieldset.ri-field, fieldset.ri-rating { border: 0; padding: 0; margin: 0 0 18px;
 .ri-team__contact { font-size: 14.5px; color: var(--ri-muted); margin-bottom: 0; }
 @media (max-width: 640px) { .ri-team__member { grid-template-columns: 1fr; } .ri-team__member img { max-width: 220px; } }
 .ri-steps { counter-reset: step; list-style: none; padding: 0; margin: 12px 0 20px; display: grid; gap: 12px; }
-.ri-steps li { counter-increment: step; position: relative; padding: 14px 16px 14px 62px; background: var(--ri-bg); border-radius: 8px; line-height: 1.65; }
+.ri-steps li { list-style: none; counter-increment: step; position: relative; padding: 14px 16px 14px 62px; background: var(--ri-bg); border-radius: 8px; line-height: 1.65; }
 .ri-steps li::before { content: counter(step); position: absolute; left: 16px; top: 13px; width: 32px; height: 32px; border-radius: 50%; background: var(--ri-blue); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 .ri-cta { margin-top: 40px; background: var(--ri-blue-dark); color: #fff; border-radius: 10px; padding: 32px 28px; text-align: center; }
 .ri-cta h2 { color: #fff; margin: 0 0 8px; }
@@ -160,3 +161,11 @@ body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .he
 body:not(.bizberg_transparent_header) header#masthead .navbar-default.sticky .navbar-nav>li>a:not(.menu_custom_btn):hover,
 body:not(.bizberg_transparent_header) header#masthead .sticky .navbar-nav>li:not(.search_wrapper):not(.header_btn_wrapper):hover { background: rgba(10,10,10,.1) !important; border-color: transparent; }
 body:not(.bizberg_transparent_header) header#masthead .sticky .navbar-nav li ul { border-top-color: rgba(10,10,10,.1) !important; }
+
+.ri-fees__choose { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 18px 0 4px; font-weight: 600; color: var(--ri-ink); }
+.ri-toggle { display: inline-flex; border: 1px solid var(--ri-blue); border-radius: 999px; overflow: hidden; }
+.ri-toggle button { border: 0; background: #fff; color: var(--ri-blue); padding: 6px 18px; font: inherit; font-weight: 600; cursor: pointer; }
+.ri-toggle button.is-active { background: var(--ri-blue); color: #fff; }
+.ri-fees__table[data-price-mode="couple"] [data-price="single"],
+.ri-fees__table[data-price-mode="single"] [data-price="couple"] { display: none; }
+.ri-fees__caption { font-style: italic; margin: 0 0 16px; font-size: 14px; color: var(--ri-muted); }
