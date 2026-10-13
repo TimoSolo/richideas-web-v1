@@ -1,0 +1,58 @@
+# Cloudflare Pages redirects (processed top to bottom, first match wins).
+# Covers the old WordPress site's URLs that no longer exist here. Real pages and
+# the 27 posts keep their URLs, so they need nothing. Query strings (?p=123,
+# ?page_id=45) can't be matched in this file; see README.
+
+# Old services guide
+/wp-content/uploads/2025/05/RIG-Services-2025_V1_1_May2025.pdf  /wp-content/uploads/2026/04/RIG-Services-2026.pdf  301
+
+# Placeholder / demo pages
+/agency-homepage-2     /  301
+/agency-homepage-2/    /  301
+/sample-page           /  301
+/sample-page/          /  301
+
+# Elementor placeholder posts
+/2022/07/23/elementor-1250*  /blogs/  301
+/2022/07/23/elementor-1256*  /blogs/  301
+
+# Author and category archives
+/author/*      /blogs/  301
+/category/*    /blogs/  301
+/blog          /blogs/  301
+/blog/         /blogs/  301
+
+# Month archives (post URLs are /YYYY/MM/DD/slug/ and are untouched)
+/2020/12  /blogs/  301
+/2020/12/  /blogs/  301
+/2021/01  /blogs/  301
+/2021/01/  /blogs/  301
+/2021/02  /blogs/  301
+/2021/02/  /blogs/  301
+/2021/03  /blogs/  301
+/2021/03/  /blogs/  301
+/2021/04  /blogs/  301
+/2021/04/  /blogs/  301
+/2021/06  /blogs/  301
+/2021/06/  /blogs/  301
+/2021/07  /blogs/  301
+/2021/07/  /blogs/  301
+/2022/06  /blogs/  301
+/2022/06/  /blogs/  301
+/2022/07  /blogs/  301
+/2022/07/  /blogs/  301
+/2022/08  /blogs/  301
+/2022/08/  /blogs/  301
+/2022/12  /blogs/  301
+/2022/12/  /blogs/  301
+/2023/01  /blogs/  301
+/2023/01/  /blogs/  301
+
+# RSS feeds now live on Substack
+/feed         https://terencetobincfp.substack.com/feed  301
+/feed/        https://terencetobincfp.substack.com/feed  301
+/comments/feed*  https://terencetobincfp.substack.com/feed  301
+
+# WordPress admin
+/wp-admin*   /  301
+/wp-login.php  /  301

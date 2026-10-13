@@ -1,7 +1,7 @@
 # richideas.co.za — static site (phase 1)
 
 A static copy of the Rich Ideas Group website, cleaned up and fixed, that runs on
-GitHub Pages or Cloudflare Pages with no server, database or WordPress.
+Cloudflare Pages (or any static host) with no server, database or WordPress.
 
 The deployable site is the `site/` folder. Everything else is tooling and reference.
 
@@ -10,7 +10,7 @@ site/          the website (open site/index.html, or serve the folder)
 scripts/       build.py (one-time WordPress mirror → site/), chrome.py (shared header/footer)
 templates/     fragments build.py injects: forms, About page, fee table, home hero, insights
 reference/     screenshots of the live WordPress site (before/) and this site (after/)
-.github/       GitHub Pages deployment workflow
+.github/       deploy workflow (push to main -> Cloudflare Pages)
 ```
 
 ## What changed from the WordPress site
@@ -49,11 +49,8 @@ Newsletter forms submit to Substack's subscribe page with the email pre-filled; 
 
 ## Deploying
 
-GitHub Pages: Settings → Pages → Source "GitHub Actions". The workflow in `.github/workflows/pages.yml`
-publishes `site/` on every push to `main`. For a custom domain add `site/CNAME` containing
-`www.richideas.co.za` and point DNS at GitHub Pages.
-
-Cloudflare Pages: create a project from this repo, no build command, output directory `site`.
+Cloudflare Pages, project `richideas`. Every push to `main` runs `.github/workflows/deploy.yml`, which needs two
+repo secrets: `CLOUDFLARE_API_TOKEN` (Account > Cloudflare Pages: Edit) and `CLOUDFLARE_ACCOUNT_ID`.
 `site/_headers` and `site/_redirects` are picked up automatically (old WordPress URLs redirect).
 
 Any other host: upload the contents of `site/`.
@@ -68,3 +65,19 @@ mirror and is not needed for day-to-day edits.
 Things still worth doing (not in phase 1): real online booking, client testimonials, the
 executor-fee / cost-of-death calculators, and the new site and education content planned for
 phase 2.
+
+## Hosting on Cloudflare Pages
+
+`site/_redirects` sends the old WordPress URLs that no longer exist (archives, feeds, the 2025
+services PDF, placeholder pages) to their closest equivalent with a 301. `site/_headers` adds
+`noindex` on `*.pages.dev` and `richideas.7vn.dev` only, so production stays indexable.
+`wrangler.toml` points Pages at `site/`.
+
+```
+npx wrangler pages deploy site --project-name richideas    # first run creates the project
+npx wrangler pages dev site                                 # local preview incl. redirects
+```
+
+Not covered: `?p=123` / `?page_id=45` links (Pages can't match query strings), and
+`richideas.co.za` -> `www` (add a Cloudflare Redirect Rule on the zone at cutover). Also add each new
+origin to `workers/forms/sites.json` in the 7vn.dev repo, or the forms will be rejected there.

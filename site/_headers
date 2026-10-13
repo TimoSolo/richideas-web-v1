@@ -1,0 +1,10 @@
+# Keep staging out of search engines. These rules match only the staging hosts,
+# so production (richideas.co.za) stays indexable.
+https://*.pages.dev/*
+  X-Robots-Tag: noindex
+https://richideas.7vn.dev/*
+  X-Robots-Tag: noindex
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
