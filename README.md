@@ -81,3 +81,13 @@ npx wrangler pages dev site                                 # local preview incl
 Not covered: `?p=123` / `?page_id=45` links (Pages can't match query strings), and
 `richideas.co.za` -> `www` (add a Cloudflare Redirect Rule on the zone at cutover). Also add each new
 origin to `workers/forms/sites.json` in the 7vn.dev repo, or the forms will be rejected there.
+
+### Test-site password
+
+`functions/_middleware.js` asks for a password on every host except `richideas.co.za` and
+`www.richideas.co.za`, so `richideas.7vn.dev` and `*.pages.dev` are gated and the live site never is.
+The password is the `STAGING_PASSWORD` secret on the Pages project (username is ignored):
+
+```
+npx wrangler pages secret put STAGING_PASSWORD --project-name richideas
+```
