@@ -46,6 +46,8 @@ PAGES = {  # canonical path -> mirror file
     "/blogs/": "blogs/index.html",
     "/thankyou/": "thankyou/index.html",
 }
+# client-only pages: kept out of the sitemap and search results
+NOINDEX = {"/questions/"}
 DROP_POSTS = {"elementor-1250", "elementor-1256"}
 for f in sorted(glob.glob(os.path.join(SRC, "20*/*/*/*/index.html"))):
     slug = f.split(os.sep)[-2]
@@ -345,6 +347,8 @@ def process_page(path, relfile):
     pre = h[:head_i]
     root = "../" * (path.count("/") - 1)
     head = clean_head(head, path)
+    if path in NOINDEX:
+        head = re.sub(r"<meta name='robots'[^>]*>", "<meta name='robots' content='noindex, nofollow' />", head)
     head = head.replace("</title>", "</title>\n" + chrome.head_html(root), 1) if "</title>" in head else head + chrome.head_html(root)
     body = clean_body(body, path, root)
     body = page_specific(body, path, root)
@@ -400,7 +404,7 @@ def main():
     # extras
     open(os.path.join(SITE, ".nojekyll"), "w").close()
     open(os.path.join(SITE, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {HOST}/sitemap.xml\n")
-    urls = "\n".join(f"  <url><loc>{HOST}{p}</loc></url>" for p in PAGES if p != "/thankyou/")
+    urls = "\n".join(f"  <url><loc>{HOST}{p}</loc></url>" for p in PAGES if p != "/thankyou/" and p not in NOINDEX)
     open(os.path.join(SITE, "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "\n</urlset>\n")
     open(os.path.join(SITE, "404.html"), "w", encoding="utf-8").write(fragment("pages/404.html"))
     n = chrome.apply_all(SITE)
