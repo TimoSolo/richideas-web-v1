@@ -324,7 +324,7 @@ def page_specific(body, path, root):
     elif path == "/review/":
         body = re.sub(r"<iframe[^>]*forms\.office\.com[^>]*>.*?</iframe>", fragment("forms/review.html", root=root), body, count=1, flags=re.S)
     elif path == "/questions/":
-        body = re.sub(r"<iframe[^>]*jotform[^>]*>.*?</iframe>", fragment("forms/questions.html", root=root), body, count=1, flags=re.S)
+        body = re.sub(r"<iframe[^>]*jotform[^>]*>.*?</iframe>", fragment("forms/questions-link.html", root=root), body, count=1, flags=re.S)
     elif path == "/contact-us/":
         body = re.sub(r'(<div class="elementor-widget-container">)\s*https://forms\.microsoft\.com/r/XDPrW0u9V6\s*(</div>)',
                       lambda m: m.group(1) + fragment("forms/contact.html", root=root) + m.group(2), body, count=1, flags=re.S)

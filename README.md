@@ -16,8 +16,9 @@ reference/     screenshots of the live WordPress site (before/) and this site (a
 ## What changed from the WordPress site
 
 Fixed
-- Every Microsoft Forms / Jotform iframe is gone. Book a Meeting, Contact, Free Will, Review and
-  the client Questionnaire are native HTML forms with validation, a honeypot and POPIA consent.
+- Every Microsoft Forms iframe is gone. Book a Meeting, Contact, Free Will and Review are native
+  HTML forms with validation, a honeypot and POPIA consent. The client Questionnaire links out to
+  the existing Jotform for now; `templates/forms/questions.html` is a start on a native version.
 - About Us is a real page: the practice, the team (Terence, Salomé, Desireé), the six-step
   process, credentials.
 - Contact Us has a working form instead of a pasted URL.
